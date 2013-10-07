@@ -840,10 +840,10 @@ Namespace GetInfo
         ''' </summary>
         ''' <returns></returns>
         ''' <remarks></remarks>
-        Public Function IsRemoveable() As Boolean
+        Public Function IsRemovable() As Boolean
             For Each obj As ManagementObject In searcher.Get()
-                If Not obj("Removeable") Is Nothing Then
-                    If obj("Removeable").ToString() = "True" Then Return True Else Return False
+                If Not obj("Removable") Is Nothing Then
+                    If obj("Removable").ToString() = "True" Then Return True Else Return False
                 Else : Return True
                 End If
             Next
