@@ -11,10 +11,14 @@ Imports SysLib.GetInfo
 
 Module Samples
     Private cpu As CPU = New CPU
+    Private cd As CDROMDrive = New CDROMDrive
+    Private cc As ComputerSystem = New ComputerSystem
 
     Sub Main()
         Console.WriteLine(cpu.GetAddressWidth)
         Console.WriteLine(cpu.GetCaption)
+        Console.WriteLine(cd.IsMediaLoaded)
+        Console.WriteLine(cc.GetAdminPasswordStatus)
         Console.WriteLine("Display more info? (Y/N)")
         Dim read As String = Console.ReadLine()
         If read = "y" Or read = "Y" Then
